@@ -61,6 +61,7 @@ const port = process.env.PORT || 8000;
 // });
 
 //change client
+const path = require('path');
 app.get('/',(req,res)=>{
   app.use(express.static(path.resolve(__dirname,'client','build')))
   res.sendFile(path.resolve(__dirname,'client','build','index.html'))
